@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfume Basket | ALFARHANI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="basket">
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="ph-frame logo-slot" aria-label="ALFARHANI - Home">
+      <img src="images/logo.png" alt="ALFARHANI logo">
+      <span class="ph-fallback"><span>Logo</span></span>
+    </a>
+    <span class="brand-name">ALFARHANI</span>
+    <nav class="icon-nav" aria-label="Main navigation">
+      <a href="index.html" data-page="home" aria-label="Home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-9"/><path d="M9.5 20v-6h5v6"/></svg>
+      </a>
+      <a href="shop.html" data-page="shop" aria-label="Shop">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      </a>
+      <a href="about.html" data-page="about" aria-label="About us">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="7.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="contact.html" data-page="contact" aria-label="Contact us">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h3.5l1.5 4-2 1.5a12 12 0 0 0 6.5 6.5l1.5-2 4 1.5V19a2 2 0 0 1-2 2C10.5 21 3 13.5 3 6a2 2 0 0 1 2-2Z"/></svg>
+      </a>
+      <a href="basket.html" data-page="basket" class="basket-nav" aria-label="Perfume basket">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="basket-badge" data-basket-badge hidden>0</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main data-basket-page>
+  <div class="page-head container">
+    <p class="section-eyebrow">— Your selection</p>
+    <h1 class="section-title">Perfume Basket</h1>
+    <p>Review your selected perfumes and send your order directly via WhatsApp.</p>
+  </div>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="basket-panel" aria-labelledby="basket-title">
+        <div class="basket-head">
+          <div>
+            <p class="section-eyebrow">— Added perfumes</p>
+            <h2 id="basket-title" class="basket-title">Your selection <span data-basket-count>0</span></h2>
+          </div>
+          <button type="button" class="basket-clear" data-basket-clear hidden>Clear basket</button>
+        </div>
+        <p class="basket-empty" data-basket-empty>You have not added any perfumes yet. <a href="shop.html" class="basket-shop-link">Browse the shop</a></p>
+        <ul class="basket-list" data-basket-list></ul>
+
+        <div class="basket-form" aria-label="Customer details">
+          <div class="field-group">
+            <label for="customer-name">Customer name</label>
+            <input id="customer-name" name="customer-name" type="text" data-basket-customer-name placeholder="Enter your full name" required>
+          </div>
+          <div class="field-group">
+            <label for="customer-address">Address</label>
+            <input id="customer-address" name="customer-address" type="text" data-basket-customer-address placeholder="Enter your delivery address" required>
+          </div>
+          <div class="field-group">
+            <label for="customer-phone">Phone number</label>
+            <input id="customer-phone" name="customer-phone" type="tel" data-basket-customer-phone placeholder="Enter your phone number" required>
+          </div>
+        </div>
+
+        <button type="button" class="btn-gold basket-submit" data-basket-submit disabled>Send order via WhatsApp</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
