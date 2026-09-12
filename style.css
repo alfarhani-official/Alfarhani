@@ -600,6 +600,10 @@ img { max-width: 100%; display: block; }
 .service-icon {
   width: 24px;
   height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  max-width: 24px;
+  max-height: 24px;
   margin-left: 7px;
   display: inline-grid;
   vertical-align: -5px;
@@ -607,7 +611,13 @@ img { max-width: 100%; display: block; }
   color: var(--gold-soft);
 }
 
-.service-icon svg { width: 19px; height: 19px; }
+.service-icon svg {
+  display: block;
+  width: 19px;
+  height: 19px;
+  max-width: 19px;
+  max-height: 19px;
+}
 
 .service-card h3 {
   color: var(--ivory);
