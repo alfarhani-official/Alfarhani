@@ -598,9 +598,9 @@ img { max-width: 100%; display: block; }
 }
 
 .service-icon {
-  width: 52px;
-  height: 52px;
-  margin: 0 auto 18px;
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 14px;
   display: grid;
   place-items: center;
   color: var(--gold-soft);
@@ -608,7 +608,7 @@ img { max-width: 100%; display: block; }
   border-radius: 50%;
 }
 
-.service-icon svg { width: 25px; height: 25px; }
+.service-icon svg { width: 21px; height: 21px; }
 
 .service-card h3 {
   color: var(--ivory);
