@@ -3,6 +3,7 @@
 // matching filename, this class is never added and the photo shows normally.
 const watchImages = (scope = document) => scope.querySelectorAll('.ph-frame img').forEach((img) => {
   img.addEventListener('error', () => {
+    if (img.classList.contains('image-hover')) return;
     img.classList.add('img-missing');
     img.closest('.ph-frame').classList.add('no-image');
   });
@@ -186,19 +187,28 @@ updateBasketBadge();
 
 const getDetailUrl = (product, index) => {
   const description = PRODUCT_DESCRIPTIONS[index] || product.description;
+  const image = index === 0 ? 'images/product-1a.jpg' : index === 1 ? 'images/product-2a.jpg' : index === 2 ? 'images/product-3a.jpg' : index === 3 ? 'images/product-4a.jpg' : index === 4 ? 'images/product-5a.jpg' : index === 5 ? 'images/product-6a.jpg' : index === 6 ? 'images/product-7a.jpg' : index === 7 ? 'images/product-8a.jpg' : `images/product-${index + 1}.jpg`;
   const params = new URLSearchParams({
-    type: 'product', image: `images/product-${index + 1}.jpg`, alt: getProductName(product.name),
+    type: 'product', image, alt: getProductName(product.name),
     title: getProductName(product.name), description, price: PRICE,
     gender: translateGender(product.gender), season: translateSeason(product.season), top: translateNotes(product.top),
     middle: translateNotes(product.middle), base: translateNotes(product.base)
   });
+  if (index === 0) params.set('hoverImage', 'images/product-1b.png');
+  if (index === 1) params.set('hoverImage', 'images/product-2b.png');
+  if (index === 2) params.set('hoverImage', 'images/product-3b.jpg');
+  if (index === 3) params.set('hoverImage', 'images/product-4b.png');
+  if (index === 4) params.set('hoverImage', 'images/product-5b.png');
+  if (index === 5) params.set('hoverImage', 'images/product-6b.jpg');
+  if (index === 6) params.set('hoverImage', 'images/product-7b.jpg');
+  if (index === 7) params.set('hoverImage', 'images/product-8b.jpg');
   return `details.html?${params}`;
 };
 
 const productGrid = document.querySelector('[data-product-grid]');
 if (productGrid && Array.isArray(PRODUCTS)) {
   productGrid.innerHTML = PRODUCTS.map((product, index) => `<div class="card" data-detail-url="${getDetailUrl(product, index)}" tabindex="0" role="link" aria-label="View details for ${getProductName(product.name)}">
-    <div class="ph-frame"><img src="images/product-${index + 1}.jpg" alt="${getProductName(product.name)}">${fallbackMarkup(index)}</div>
+    <div class="ph-frame"><img src="${index === 0 ? 'images/product-1a.jpg' : index === 1 ? 'images/product-2a.jpg' : index === 2 ? 'images/product-3a.jpg' : index === 3 ? 'images/product-4a.jpg' : index === 4 ? 'images/product-5a.jpg' : index === 5 ? 'images/product-6a.jpg' : index === 6 ? 'images/product-7a.jpg' : index === 7 ? 'images/product-8a.jpg' : `images/product-${index + 1}.jpg`}" alt="${getProductName(product.name)}">${index === 0 ? '<img class="image-hover" src="images/product-1b.png" alt="">' : index === 1 ? '<img class="image-hover" src="images/product-2b.png" alt="">' : index === 2 ? '<img class="image-hover" src="images/product-3b.jpg" alt="">' : index === 3 ? '<img class="image-hover" src="images/product-4b.png" alt="">' : index === 4 ? '<img class="image-hover" src="images/product-5b.png" alt="">' : index === 5 ? '<img class="image-hover" src="images/product-6b.jpg" alt="">' : index === 6 ? '<img class="image-hover" src="images/product-7b.jpg" alt="">' : index === 7 ? '<img class="image-hover" src="images/product-8b.jpg" alt="">' : ''}${fallbackMarkup(index)}</div>
     <div class="card-body"><h3 class="card-title">${getProductName(product.name)}</h3><p class="card-sub">${PRODUCT_DESCRIPTIONS[index] || product.description}</p><p class="card-price">${PRICE}</p><button type="button" class="card-link basket-add" data-add-basket="${getProductName(product.name)}">Add to basket</button><a href="${getDetailUrl(product, index)}" class="card-link" data-whatsapp-link="Hello, I would like to ask about ${getProductName(product.name)}">Ask on WhatsApp</a></div>
   </div>`).join('');
   productGrid.querySelectorAll('.card').forEach((card) => {
@@ -315,12 +325,19 @@ const detailPage = document.querySelector('[data-detail-page]');
 if (detailPage) {
   const params = new URLSearchParams(window.location.search);
   const image = detailPage.querySelector('.detail-image img');
+  const hoverImage = detailPage.querySelector('.detail-image .image-hover');
   const type = params.get('type') === 'product' ? 'Product details' : 'Collection details';
   detailPage.querySelector('.detail-kicker').textContent = type;
   detailPage.querySelector('.detail-title').textContent = params.get('title') || 'Details';
   detailPage.querySelector('[data-detail-description]').textContent = params.get('description') || '';
-  image.src = params.get('image') || '';
+  const sourceImage = params.get('image') || '';
+  image.src = sourceImage.replace('images/product-1.jpg', 'images/product-1a.jpg').replace('images/product-2.jpg', 'images/product-2a.jpg').replace('images/product-3.jpg', 'images/product-3a.jpg').replace('images/product-4.jpg', 'images/product-4a.jpg').replace('images/product-5.jpg', 'images/product-5a.jpg').replace('images/product-6.jpg', 'images/product-6a.jpg').replace('images/product-7.jpg', 'images/product-7a.jpg').replace('images/product-8.jpg', 'images/product-8a.jpg');
   image.alt = params.get('alt') || params.get('title') || '';
+  const hoverSource = (params.get('hoverImage') || (sourceImage.includes('images/product-1') ? 'images/product-1b.png' : sourceImage.includes('images/product-2') ? 'images/product-2b.png' : sourceImage.includes('images/product-3') ? 'images/product-3b.jpg' : sourceImage.includes('images/product-4') ? 'images/product-4b.png' : sourceImage.includes('images/product-5') ? 'images/product-5b.png' : sourceImage.includes('images/product-6') ? 'images/product-6b.jpg' : sourceImage.includes('images/product-7') ? 'images/product-7b.jpg' : sourceImage.includes('images/product-8') ? 'images/product-8b.jpg' : '')).replace('product-1b.jpg', 'product-1b.png').replace('product-2b.jpg', 'product-2b.png');
+  if (hoverSource) {
+    hoverImage.src = hoverSource;
+    hoverImage.hidden = false;
+  }
   const price = params.get('price') || '';
   detailPage.querySelector('.detail-price').textContent = price;
   if (price) detailPage.querySelector('.detail-price').hidden = false;
