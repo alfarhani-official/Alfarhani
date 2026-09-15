@@ -61,6 +61,21 @@ img { max-width: 100%; display: block; }
   z-index: 1;
 }
 
+.ph-frame .image-hover {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.ph-frame:hover .image-hover,
+.ph-frame:focus-within .image-hover {
+  opacity: 1;
+}
+
+.detail-image .image-hover[hidden] { display: none; }
+
 .ph-fallback {
   position: absolute;
   inset: 0;
