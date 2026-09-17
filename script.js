@@ -64,19 +64,19 @@ const PRICE = '19,000 Iraqi dinars';
 const fallbackMarkup = (index) => `<span class="ph-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><span>Image unavailable</span></span>`;
 const PRODUCT_NAMES = {
   'سَنَد': 'Sanad', 'أزَل': 'Azal', 'ياقوت': 'Yaqoot', 'باسِل': 'Basel', 'غالِب': 'Ghalib', 'ذَهَب': 'Dhahab',
-  'جَسُور': 'Jasoor', 'فَرَح': 'Farah', 'فاتِن': 'Fatin', 'غَدير': 'Ghadir', 'نَسيم': 'Naseem', 'كَيان': 'Kayan',
-  'غَسَق': 'Ghasaq', 'هَمْس': 'Hams', 'نُور': 'Noor', 'وَقار': 'Waqar', 'شَمْس': 'Shams', 'دُجى': 'Dujay',
-  'ناضِر': 'Nadhir', 'لَيْل': 'Layl', 'جُوري': 'Jouri', 'أَرْز': 'Arz', 'الوحيد': 'Al Waheed', 'بَيان': 'Bayan',
-  'سَمَر': 'Samar', 'لُبان': 'Luban', 'شَغَف': 'Shaghaf', 'كَنْز': 'Kanz', 'عَتِيق': 'Atiq', 'صَفاء': 'Safa',
-  'رَوْق': 'Rawq', 'سُلْطان': 'Sultan', 'لَهَب': 'Lahab', 'الشغف': 'Al Shaghaf', 'فِضَّة': 'Fidda', 'سَماء': 'Samaa',
+  'جَسُور': 'Jasur', 'فَرَح': 'Farah', 'فاتِن': 'Fatin', 'غَدير': 'Ghadeer', 'نَسيم': 'Nasim', 'كَيان': 'Kayan',
+  'غَسَق': 'Ghasaq', 'هَمْس': 'Hams', 'شَمْس': 'Shams', 'دُجى': 'Dujay',
+  'ناضِر': 'Nadhir', 'لَيْل': 'Layl', 'جُوري': 'Jouri', 'أَرْز': 'Arz', 'الوحيد': 'Alwahid', 'بَيان': 'Bayan',
+  'سَمَر': 'Samar', 'لُبان': 'Luban', 'شَغَف': 'Shaghaf', 'كَنْز': 'Kanz', 'عَتِيق': 'Ateeq', 'صَفاء': 'Safaa',
+  'رَوْق': 'Rawq', 'سُلْطان': 'Sultan', 'لَهَب': 'Lahab', 'فِضَّة': 'Fiddah',
   'مَلِكَة': 'Malika', 'رايَة': 'Raya', 'إِكْسِير': 'Ikseer', 'رَنا': 'Rana', 'رَيّان': 'Rayyan', 'رِيم': 'Reem',
   'وَرْد': 'Ward', 'سُهاد': 'Suhaad', 'مُلْهِم': 'Mulhim', 'فَجْر': 'Fajr', 'نَغَم': 'Nagham', 'نَعْناع': 'Naanaa',
-  'جَذْوَة': 'Jathwa', 'زاهِيَة': 'Zahiya',
+  'جَذْوَة': 'Jathwa', 'زاهِيَة': 'Zahiya', 'Faris': 'Faris',
   'عهدي': 'Ahdi', 'جوهرة': 'Jawhara', 'بلّور': 'Billour', 'الفاتح': 'Al Fateh', 'ذهبية': 'Thahabiya', 'الظافر': 'Al Dhafer',
   'الكنز': 'Al Kanz', 'بدوي': 'Badawi', 'بهجة': 'Bahja', 'سيدتي': 'Sayidati', 'إشراقة': 'Ishraqa', 'سباق': 'Sibaq',
   'الخيزران': 'Al Khizran', 'غسق': 'Ghasaq', 'رحيق': 'Rahiq', 'نسرين': 'Nasreen', 'ملوكي': 'Malouki', 'سمراء': 'Samra',
   'حرة': 'Hurra', 'نبض': 'Nabd', 'غموض': 'Ghomoud', 'مسك ورد': 'Musk Ward', 'سندس': 'Sundus', 'بيضاء': 'Bayda',
-  'ليلية': 'Layliya', 'المتاهة': 'Al Mataha', 'جسور': 'Jasoor', 'غنيمة': 'Ghanima', 'أصيل': 'Aseel', 'مسك روح': 'Musk Rouh',
+  'ليلية': 'Layliya', 'المتاهة': 'Al Mataha', 'جسور': 'Jasur', 'غنيمة': 'Ghanima', 'أصيل': 'Aseel', 'مسك روح': 'Musk Rouh',
   'طيف': 'Tayf', 'رحيق العود': 'Rahiq Al Oud', 'عزيمة': 'Azima', 'الأنا': 'Al Ana', 'فردوس': 'Firdaws', 'الحبيبة': 'Al Habiba',
   'الأيقونة': 'Al Icona', 'الفارس': 'Al Fares', 'بهيجة': 'Bahija', 'القائد': 'Al Qaed', 'أميرة': 'Amira', 'وردتي': 'Wardati',
   'ساحرة': 'Sahira', 'الملهمة': 'Al Molhima', 'بداية': 'Bidaya', 'أنشودة': 'Anshuda', 'صرح': 'Sarh', 'الأسطورة': 'Al Ostoura'
@@ -185,9 +185,14 @@ if (basketPage) {
 
 updateBasketBadge();
 
+const getNewProductImage = (index, suffix = 'a') => {
+  const productNumber = index + 1;
+  return productNumber >= 34 && productNumber <= 51 ? `images/product-${productNumber}${suffix}.jpg` : '';
+};
+
 const getDetailUrl = (product, index) => {
   const description = PRODUCT_DESCRIPTIONS[index] || product.description;
-  const image = index === 0 ? 'images/product-1a.jpg' : index === 1 ? 'images/product-2a.jpg' : index === 2 ? 'images/product-3a.jpg' : index === 3 ? 'images/product-4a.jpg' : index === 4 ? 'images/product-5a.jpg' : index === 5 ? 'images/product-6a.jpg' : index === 6 ? 'images/product-7a.jpg' : index === 7 ? 'images/product-8a.jpg' : `images/product-${index + 1}.jpg`;
+  const image = getNewProductImage(index) || (index === 0 ? 'images/product-1a.jpg' : index === 1 ? 'images/product-2a.jpg' : index === 2 ? 'images/product-3a.jpg' : index === 3 ? 'images/product-4a.jpg' : index === 4 ? 'images/product-5a.jpg' : index === 5 ? 'images/product-6a.jpg' : index === 6 ? 'images/product-7a.jpg' : index === 7 ? 'images/product-8a.jpg' : index === 8 ? 'images/product-9a.jpg' : index === 9 ? 'images/product-10a.jpg' : index === 10 ? 'images/product-11a.jpg' : index === 11 ? 'images/product-12a.jpg' : index === 12 ? 'images/product-13a.jpg' : index === 13 ? 'images/product-14a.jpg' : index === 14 ? 'images/product-15a.jpg' : index === 15 ? 'images/product-16a.jpg' : index === 16 ? 'images/product-17a.jpg' : index === 17 ? 'images/product-18a.jpg' : index === 18 ? 'images/product-19a.jpg' : index === 19 ? 'images/product-20a.jpg' : index === 20 ? 'images/product-21a.jpg' : index === 21 ? 'images/product-22a.jpg' : index === 22 ? 'images/product-23a.jpg' : index === 23 ? 'images/product-24a.jpg' : index === 24 ? 'images/product-25a.jpg' : index === 25 ? 'images/product-26a.jpg' : index === 26 ? 'images/product-27a.jpg' : index === 27 ? 'images/product-28a.jpg' : index === 28 ? 'images/product-29a.jpg' : index === 29 ? 'images/product-30a.jpg' : index === 30 ? 'images/product-31a.jpg' : index === 31 ? 'images/product-32a.jpg' : index === 32 ? 'images/product-33a.jpg' : `images/product-${index + 1}.jpg`);
   const params = new URLSearchParams({
     type: 'product', image, alt: getProductName(product.name),
     title: getProductName(product.name), description, price: PRICE,
@@ -202,15 +207,53 @@ const getDetailUrl = (product, index) => {
   if (index === 5) params.set('hoverImage', 'images/product-6b.jpg');
   if (index === 6) params.set('hoverImage', 'images/product-7b.jpg');
   if (index === 7) params.set('hoverImage', 'images/product-8b.jpg');
+  if (index === 8) params.set('hoverImage', 'images/product-9b.jpg');
+  if (index === 9) params.set('hoverImage', 'images/product-10b.jpg');
+  if (index === 10) params.set('hoverImage', 'images/product-11b.jpg');
+  if (index === 11) params.set('hoverImage', 'images/product-12b.jpg');
+  if (index === 12) params.set('hoverImage', 'images/product-13b.jpg');
+  if (index === 13) params.set('hoverImage', 'images/product-14b.jpg');
+  if (index === 14) params.set('hoverImage', 'images/product-15b.jpg');
+  if (index === 15) params.set('hoverImage', 'images/product-16b.jpg');
+  if (index === 16) params.set('hoverImage', 'images/product-17b.jpg');
+  if (index === 17) params.set('hoverImage', 'images/product-18b.jpg');
+  if (index === 18) params.set('hoverImage', 'images/product-19b.jpg');
+  if (index === 19) params.set('hoverImage', 'images/product-20b.jpg');
+  if (index === 20) params.set('hoverImage', 'images/product-21b.jpg');
+  if (index === 21) params.set('hoverImage', 'images/product-22b.jpg');
+  if (index === 22) params.set('hoverImage', 'images/product-23b.jpg');
+  if (index === 23) params.set('hoverImage', 'images/product-24b.jpg');
+  if (index === 24) params.set('hoverImage', 'images/product-25b.jpg');
+  if (index === 25) params.set('hoverImage', 'images/product-26b.jpg');
+  if (index === 26) params.set('hoverImage', 'images/product-27b.jpg');
+  if (index === 27) params.set('hoverImage', 'images/product-28b.jpg');
+  if (index === 28) params.set('hoverImage', 'images/product-29b.jpg');
+  if (index === 29) params.set('hoverImage', 'images/product-30b.jpg');
+  if (index === 30) params.set('hoverImage', 'images/product-31b.jpg');
+  if (index === 31) params.set('hoverImage', 'images/product-32b.jpg');
+  if (index === 32) params.set('hoverImage', 'images/product-33b.jpg');
+  if (getNewProductImage(index)) params.set('hoverImage', getNewProductImage(index, 'b'));
   return `details.html?${params}`;
 };
 
 const productGrid = document.querySelector('[data-product-grid]');
 if (productGrid && Array.isArray(PRODUCTS)) {
   productGrid.innerHTML = PRODUCTS.map((product, index) => `<div class="card" data-detail-url="${getDetailUrl(product, index)}" tabindex="0" role="link" aria-label="View details for ${getProductName(product.name)}">
-    <div class="ph-frame"><img src="${index === 0 ? 'images/product-1a.jpg' : index === 1 ? 'images/product-2a.jpg' : index === 2 ? 'images/product-3a.jpg' : index === 3 ? 'images/product-4a.jpg' : index === 4 ? 'images/product-5a.jpg' : index === 5 ? 'images/product-6a.jpg' : index === 6 ? 'images/product-7a.jpg' : index === 7 ? 'images/product-8a.jpg' : `images/product-${index + 1}.jpg`}" alt="${getProductName(product.name)}">${index === 0 ? '<img class="image-hover" src="images/product-1b.png" alt="">' : index === 1 ? '<img class="image-hover" src="images/product-2b.png" alt="">' : index === 2 ? '<img class="image-hover" src="images/product-3b.jpg" alt="">' : index === 3 ? '<img class="image-hover" src="images/product-4b.png" alt="">' : index === 4 ? '<img class="image-hover" src="images/product-5b.png" alt="">' : index === 5 ? '<img class="image-hover" src="images/product-6b.jpg" alt="">' : index === 6 ? '<img class="image-hover" src="images/product-7b.jpg" alt="">' : index === 7 ? '<img class="image-hover" src="images/product-8b.jpg" alt="">' : ''}${fallbackMarkup(index)}</div>
+    <div class="ph-frame"><img src="${index === 0 ? 'images/product-1a.jpg' : index === 1 ? 'images/product-2a.jpg' : index === 2 ? 'images/product-3a.jpg' : index === 3 ? 'images/product-4a.jpg' : index === 4 ? 'images/product-5a.jpg' : index === 5 ? 'images/product-6a.jpg' : index === 6 ? 'images/product-7a.jpg' : index === 7 ? 'images/product-8a.jpg' : index === 8 ? 'images/product-9a.jpg' : index === 9 ? 'images/product-10a.jpg' : index === 10 ? 'images/product-11a.jpg' : index === 11 ? 'images/product-12a.jpg' : index === 12 ? 'images/product-13a.jpg' : index === 13 ? 'images/product-14a.jpg' : index === 14 ? 'images/product-15a.jpg' : index === 15 ? 'images/product-16a.jpg' : index === 16 ? 'images/product-17a.jpg' : index === 17 ? 'images/product-18a.jpg' : index === 18 ? 'images/product-19a.jpg' : index === 19 ? 'images/product-20a.jpg' : index === 20 ? 'images/product-21a.jpg' : index === 21 ? 'images/product-22a.jpg' : index === 22 ? 'images/product-23a.jpg' : index === 23 ? 'images/product-24a.jpg' : index === 24 ? 'images/product-25a.jpg' : index === 25 ? 'images/product-26a.jpg' : index === 26 ? 'images/product-27a.jpg' : index === 27 ? 'images/product-28a.jpg' : index === 28 ? 'images/product-29a.jpg' : index === 29 ? 'images/product-30a.jpg' : index === 30 ? 'images/product-31a.jpg' : index === 31 ? 'images/product-32a.jpg' : index === 32 ? 'images/product-33a.jpg' : `images/product-${index + 1}.jpg`}" alt="${getProductName(product.name)}">${index === 0 ? '<img class="image-hover" src="images/product-1b.png" alt="">' : index === 1 ? '<img class="image-hover" src="images/product-2b.png" alt="">' : index === 2 ? '<img class="image-hover" src="images/product-3b.jpg" alt="">' : index === 3 ? '<img class="image-hover" src="images/product-4b.png" alt="">' : index === 4 ? '<img class="image-hover" src="images/product-5b.png" alt="">' : index === 5 ? '<img class="image-hover" src="images/product-6b.jpg" alt="">' : index === 6 ? '<img class="image-hover" src="images/product-7b.jpg" alt="">' : index === 7 ? '<img class="image-hover" src="images/product-8b.jpg" alt="">' : index === 8 ? '<img class="image-hover" src="images/product-9b.jpg" alt="">' : index === 9 ? '<img class="image-hover" src="images/product-10b.jpg" alt="">' : index === 10 ? '<img class="image-hover" src="images/product-11b.jpg" alt="">' : index === 11 ? '<img class="image-hover" src="images/product-12b.jpg" alt="">' : index === 12 ? '<img class="image-hover" src="images/product-13b.jpg" alt="">' : index === 13 ? '<img class="image-hover" src="images/product-14b.jpg" alt="">' : index === 14 ? '<img class="image-hover" src="images/product-15b.jpg" alt="">' : index === 15 ? '<img class="image-hover" src="images/product-16b.jpg" alt="">' : index === 16 ? '<img class="image-hover" src="images/product-17b.jpg" alt="">' : index === 17 ? '<img class="image-hover" src="images/product-18b.jpg" alt="">' : index === 18 ? '<img class="image-hover" src="images/product-19b.jpg" alt="">' : index === 19 ? '<img class="image-hover" src="images/product-20b.jpg" alt="">' : index === 20 ? '<img class="image-hover" src="images/product-21b.jpg" alt="">' : index === 21 ? '<img class="image-hover" src="images/product-22b.jpg" alt="">' : index === 22 ? '<img class="image-hover" src="images/product-23b.jpg" alt="">' : index === 23 ? '<img class="image-hover" src="images/product-24b.jpg" alt="">' : index === 24 ? '<img class="image-hover" src="images/product-25b.jpg" alt="">' : index === 25 ? '<img class="image-hover" src="images/product-26b.jpg" alt="">' : index === 26 ? '<img class="image-hover" src="images/product-27b.jpg" alt="">' : index === 27 ? '<img class="image-hover" src="images/product-28b.jpg" alt="">' : index === 28 ? '<img class="image-hover" src="images/product-29b.jpg" alt="">' : index === 29 ? '<img class="image-hover" src="images/product-30b.jpg" alt="">' : index === 30 ? '<img class="image-hover" src="images/product-31b.jpg" alt="">' : index === 31 ? '<img class="image-hover" src="images/product-32b.jpg" alt="">' : index === 32 ? '<img class="image-hover" src="images/product-33b.jpg" alt="">' : ''}${fallbackMarkup(index)}</div>
     <div class="card-body"><h3 class="card-title">${getProductName(product.name)}</h3><p class="card-sub">${PRODUCT_DESCRIPTIONS[index] || product.description}</p><p class="card-price">${PRICE}</p><button type="button" class="card-link basket-add" data-add-basket="${getProductName(product.name)}">Add to basket</button><a href="${getDetailUrl(product, index)}" class="card-link" data-whatsapp-link="Hello, I would like to ask about ${getProductName(product.name)}">Ask on WhatsApp</a></div>
   </div>`).join('');
+  productGrid.querySelectorAll('.card').forEach((card, index) => {
+    const primaryImage = getNewProductImage(index);
+    if (!primaryImage) return;
+    const frame = card.querySelector('.ph-frame');
+    const image = frame.querySelector('img');
+    image.src = primaryImage;
+    const hoverImage = document.createElement('img');
+    hoverImage.className = 'image-hover';
+    hoverImage.src = getNewProductImage(index, 'b');
+    hoverImage.alt = '';
+    frame.insertBefore(hoverImage, frame.querySelector('.ph-fallback'));
+  });
   productGrid.querySelectorAll('.card').forEach((card) => {
     const detailUrl = card.dataset.detailUrl;
     card.addEventListener('click', (event) => { if (!event.target.closest('a, button')) window.location.href = detailUrl; });
@@ -331,9 +374,9 @@ if (detailPage) {
   detailPage.querySelector('.detail-title').textContent = params.get('title') || 'Details';
   detailPage.querySelector('[data-detail-description]').textContent = params.get('description') || '';
   const sourceImage = params.get('image') || '';
-  image.src = sourceImage.replace('images/product-1.jpg', 'images/product-1a.jpg').replace('images/product-2.jpg', 'images/product-2a.jpg').replace('images/product-3.jpg', 'images/product-3a.jpg').replace('images/product-4.jpg', 'images/product-4a.jpg').replace('images/product-5.jpg', 'images/product-5a.jpg').replace('images/product-6.jpg', 'images/product-6a.jpg').replace('images/product-7.jpg', 'images/product-7a.jpg').replace('images/product-8.jpg', 'images/product-8a.jpg');
+  image.src = sourceImage.replace('images/product-1.jpg', 'images/product-1a.jpg').replace('images/product-2.jpg', 'images/product-2a.jpg').replace('images/product-3.jpg', 'images/product-3a.jpg').replace('images/product-4.jpg', 'images/product-4a.jpg').replace('images/product-5.jpg', 'images/product-5a.jpg').replace('images/product-6.jpg', 'images/product-6a.jpg').replace('images/product-7.jpg', 'images/product-7a.jpg').replace('images/product-8.jpg', 'images/product-8a.jpg').replace('images/product-9.jpg', 'images/product-9a.jpg').replace('images/product-10.jpg', 'images/product-10a.jpg').replace('images/product-11.jpg', 'images/product-11a.jpg').replace('images/product-12.jpg', 'images/product-12a.jpg').replace('images/product-13.jpg', 'images/product-13a.jpg').replace('images/product-14.jpg', 'images/product-14a.jpg').replace('images/product-15.jpg', 'images/product-15a.jpg').replace('images/product-16.jpg', 'images/product-16a.jpg').replace('images/product-17.jpg', 'images/product-17a.jpg').replace('images/product-18.jpg', 'images/product-18a.jpg').replace('images/product-19.jpg', 'images/product-19a.jpg').replace('images/product-20.jpg', 'images/product-20a.jpg').replace('images/product-21.jpg', 'images/product-21a.jpg').replace('images/product-22.jpg', 'images/product-22a.jpg').replace('images/product-23.jpg', 'images/product-23a.jpg').replace('images/product-24.jpg', 'images/product-24a.jpg').replace('images/product-25.jpg', 'images/product-25a.jpg').replace('images/product-26.jpg', 'images/product-26a.jpg').replace('images/product-27.jpg', 'images/product-27a.jpg').replace('images/product-28.jpg', 'images/product-28a.jpg').replace('images/product-29.jpg', 'images/product-29a.jpg').replace('images/product-30.jpg', 'images/product-30a.jpg').replace('images/product-31.jpg', 'images/product-31a.jpg').replace('images/product-32.jpg', 'images/product-32a.jpg').replace('images/product-33.jpg', 'images/product-33a.jpg');
   image.alt = params.get('alt') || params.get('title') || '';
-  const hoverSource = (params.get('hoverImage') || (sourceImage.includes('images/product-1') ? 'images/product-1b.png' : sourceImage.includes('images/product-2') ? 'images/product-2b.png' : sourceImage.includes('images/product-3') ? 'images/product-3b.jpg' : sourceImage.includes('images/product-4') ? 'images/product-4b.png' : sourceImage.includes('images/product-5') ? 'images/product-5b.png' : sourceImage.includes('images/product-6') ? 'images/product-6b.jpg' : sourceImage.includes('images/product-7') ? 'images/product-7b.jpg' : sourceImage.includes('images/product-8') ? 'images/product-8b.jpg' : '')).replace('product-1b.jpg', 'product-1b.png').replace('product-2b.jpg', 'product-2b.png');
+  const hoverSource = (params.get('hoverImage') || (sourceImage.includes('images/product-1') ? 'images/product-1b.png' : sourceImage.includes('images/product-2') ? 'images/product-2b.png' : sourceImage.includes('images/product-3') ? 'images/product-3b.jpg' : sourceImage.includes('images/product-4') ? 'images/product-4b.png' : sourceImage.includes('images/product-5') ? 'images/product-5b.png' : sourceImage.includes('images/product-6') ? 'images/product-6b.jpg' : sourceImage.includes('images/product-7') ? 'images/product-7b.jpg' : sourceImage.includes('images/product-8') ? 'images/product-8b.jpg' : sourceImage.includes('images/product-9') ? 'images/product-9b.jpg' : sourceImage.includes('images/product-10') ? 'images/product-10b.jpg' : sourceImage.includes('images/product-11') ? 'images/product-11b.jpg' : sourceImage.includes('images/product-12') ? 'images/product-12b.jpg' : sourceImage.includes('images/product-13') ? 'images/product-13b.jpg' : sourceImage.includes('images/product-14') ? 'images/product-14b.jpg' : sourceImage.includes('images/product-15') ? 'images/product-15b.jpg' : sourceImage.includes('images/product-16') ? 'images/product-16b.jpg' : sourceImage.includes('images/product-17') ? 'images/product-17b.jpg' : sourceImage.includes('images/product-18') ? 'images/product-18b.jpg' : sourceImage.includes('images/product-19') ? 'images/product-19b.jpg' : sourceImage.includes('images/product-20') ? 'images/product-20b.jpg' : sourceImage.includes('images/product-21') ? 'images/product-21b.jpg' : sourceImage.includes('images/product-22') ? 'images/product-22b.jpg' : sourceImage.includes('images/product-23') ? 'images/product-23b.jpg' : sourceImage.includes('images/product-24') ? 'images/product-24b.jpg' : sourceImage.includes('images/product-25') ? 'images/product-25b.jpg' : sourceImage.includes('images/product-26') ? 'images/product-26b.jpg' : sourceImage.includes('images/product-27') ? 'images/product-27b.jpg' : sourceImage.includes('images/product-28') ? 'images/product-28b.jpg' : sourceImage.includes('images/product-29') ? 'images/product-29b.jpg' : sourceImage.includes('images/product-30') ? 'images/product-30b.jpg' : sourceImage.includes('images/product-31') ? 'images/product-31b.jpg' : sourceImage.includes('images/product-32') ? 'images/product-32b.jpg' : sourceImage.includes('images/product-33') ? 'images/product-33b.jpg' : '')).replace('product-1b.jpg', 'product-1b.png').replace('product-2b.jpg', 'product-2b.png');
   if (hoverSource) {
     hoverImage.src = hoverSource;
     hoverImage.hidden = false;
