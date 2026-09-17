@@ -21,8 +21,8 @@ if (currentPage) {
 // Footer year + WhatsApp helper: builds a wa.me link from the number set
 // in CONTACT below, so you only edit the number in one place.
 const CONTACT = {
-  whatsappNumber: '9647000000000', // TODO: replace with the real WhatsApp number (country code, no +, no spaces)
-  email: 'info@example.com'        // TODO: replace with the real email
+  whatsappNumber: '9647515825235', // Country code followed by the WhatsApp number, without + or spaces.
+  email: 'alirnew6@gmail.com'
 };
 
 document.querySelectorAll('[data-whatsapp-link]').forEach((el) => {
