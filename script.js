@@ -270,10 +270,10 @@ if (productGrid && Array.isArray(PRODUCTS)) {
 const collectionGrid = document.querySelector('[data-collection-grid]');
 if (collectionGrid) {
   const collections = [
-    { title: 'Collection One', description: 'A curated selection of luxury perfumes' },
-    { title: 'Collection Two', description: 'Elegant scents for every special moment' },
-    { title: 'Collection Three', description: 'Distinctive perfumes with an unforgettable presence' },
-    { title: 'Collection Four', description: 'A refined signature for memorable evenings' }
+    { title: 'Dalal', description: 'الأنوثة والحلاوة' },
+    { title: 'Haiba', description: 'الخشب والفخامة' },
+    { title: 'Nabd', description: 'المنعش والرياضي' },
+    { title: 'Sihr', description: 'التميز والروائح الجذابة' }
   ];
   collectionGrid.querySelectorAll('.card').forEach((card, index) => {
     const collection = collections[index];
@@ -367,6 +367,38 @@ if (subscribeForm) {
 const detailPage = document.querySelector('[data-detail-page]');
 if (detailPage) {
   const params = new URLSearchParams(window.location.search);
+  const dalalCollection = detailPage.querySelector('[data-dalal-collection]');
+  const haibaCollection = detailPage.querySelector('[data-haiba-collection]');
+  const nabdCollection = detailPage.querySelector('[data-nabd-collection]');
+  const sihrCollection = detailPage.querySelector('[data-sihr-collection]');
+  if (params.get('type') === 'collection' && params.get('collection') === '1' && dalalCollection) {
+    detailPage.querySelector('.detail-layout').hidden = true;
+    dalalCollection.hidden = false;
+    const basketButton = dalalCollection.querySelector('[data-add-basket]');
+    if (basketButton) {
+      basketButton.addEventListener('click', () => addToBasket(basketButton.dataset.addBasket));
+      updateBasketButtons();
+    }
+  }
+  if (params.get('type') === 'collection' && params.get('collection') === '2' && haibaCollection) {
+    detailPage.querySelector('.detail-layout').hidden = true;
+    haibaCollection.hidden = false;
+    const basketButton = haibaCollection.querySelector('[data-add-basket]');
+    if (basketButton) {
+      basketButton.addEventListener('click', () => addToBasket(basketButton.dataset.addBasket));
+      updateBasketButtons();
+    }
+  }
+  [['3', nabdCollection, 'Nabd'], ['4', sihrCollection, 'Sihr']].forEach(([collectionNumber, section, basketName]) => {
+    if (params.get('type') !== 'collection' || params.get('collection') !== collectionNumber || !section) return;
+    detailPage.querySelector('.detail-layout').hidden = true;
+    section.hidden = false;
+    const basketButton = section.querySelector('[data-add-basket]');
+    if (basketButton) {
+      basketButton.addEventListener('click', () => addToBasket(basketName));
+      updateBasketButtons();
+    }
+  });
   const image = detailPage.querySelector('.detail-image img');
   const hoverImage = detailPage.querySelector('.detail-image .image-hover');
   const type = params.get('type') === 'product' ? 'Product details' : 'Collection details';

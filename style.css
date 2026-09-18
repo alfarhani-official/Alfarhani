@@ -437,6 +437,55 @@ img { max-width: 100%; display: block; }
 .detail-meta span { direction: ltr; text-align: right; }
 .detail-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
 
+.collection-detail-heading {
+  max-width: 680px;
+  margin: 0 auto 34px;
+  text-align: center;
+}
+
+.collection-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.collection-actions .btn-gold,
+.collection-actions .btn-outline {
+  cursor: pointer;
+}
+
+.dalal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.dalal-card {
+  background: var(--charcoal-panel);
+  border: 1px solid var(--gold-dim);
+  border-radius: 0;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dalal-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3), 0 0 18px rgba(212, 175, 55, 0.1);
+}
+
+.dalal-card .ph-frame { aspect-ratio: 4 / 5; border: 0; }
+
+.dalal-card-body { padding: 20px 20px 24px; }
+.dalal-label { color: var(--gold); letter-spacing: 0.12em; margin: 0 0 5px; }
+.dalal-card h2 { color: var(--gold-soft); font-family: 'Amiri', var(--font-display); font-size: 1.7rem; margin: 0 0 4px; }
+.dalal-card-body > p:not(.dalal-label) { color: var(--ivory-dim); line-height: 1.8; margin: 0 0 18px; }
+.dalal-card dl { margin: 0; border-top: 1px solid var(--gold-dim); }
+.dalal-card dt { color: var(--gold-soft); font-family: var(--font-display); font-weight: 700; margin-top: 12px; }
+.dalal-card dd { color: var(--ivory-dim); line-height: 1.8; margin: 2px 0 0; }
+
 .detail-image,
 .detail-info { animation: reveal-up 0.7s ease both; }
 
@@ -444,6 +493,7 @@ img { max-width: 100%; display: block; }
   .detail-layout { grid-template-columns: 1fr; }
   .detail-image { max-height: 62vh; }
   .detail-meta p { grid-template-columns: 1fr; gap: 2px; }
+  .dalal-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
