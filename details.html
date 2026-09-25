@@ -50,7 +50,7 @@
         <h1 class="detail-title"></h1>
         <p class="detail-kicker"></p>
         <p class="detail-description" data-detail-description></p>
-        <p class="detail-price" hidden></p>
+        <p class="detail-price" hidden><del data-detail-price-old></del><strong data-detail-price-sale></strong></p>
         <div class="detail-meta" data-detail-meta hidden>
           <p><strong>Gender</strong><span data-detail-gender></span></p>
           <p><strong>Seasons</strong><span data-detail-season></span></p>
@@ -58,6 +58,16 @@
           <p><strong>Heart notes</strong><span data-detail-middle></span></p>
           <p><strong>Base notes</strong><span data-detail-base></span></p>
         </div>
+        <section class="detail-meta detail-meta-ar" data-detail-meta-ar hidden lang="ar" dir="rtl" aria-label="معلومات العطر باللغة العربية">
+          <h2 class="detail-ar-title" data-detail-title-ar></h2>
+          <p class="detail-ar-description" data-detail-description-ar></p>
+          <p><strong>السعر</strong><span class="detail-price-values"><del data-detail-price-ar-old></del><strong data-detail-price-ar></strong></span></p>
+          <p><strong>الفئة</strong><span data-detail-gender-ar></span></p>
+          <p><strong>المواسم</strong><span data-detail-season-ar></span></p>
+          <p><strong>مقدمة العطر</strong><span data-detail-top-ar></span></p>
+          <p><strong>قلب العطر</strong><span data-detail-middle-ar></span></p>
+          <p><strong>قاعدة العطر</strong><span data-detail-base-ar></span></p>
+        </section>
         <div class="detail-actions">
           <a class="btn-gold" href="contact.html">Contact us</a>
           <a class="btn-outline" data-detail-shop href="shop.html">Browse perfumes</a>
@@ -70,6 +80,7 @@
       <div class="collection-detail-heading">
         <p class="section-eyebrow">— مجموعة Dalal</p>
         <h1 class="section-title">الأنوثة والحلاوة</h1>
+        <div class="collection-price" aria-label="السعر بعد التخفيض 30 ألف دينار عراقي، السعر السابق 45 ألف دينار عراقي، والتوصيل مجاني"><del>45,000 د.ع</del><strong>30,000 د.ع</strong><span>التوصيل مجاني</span></div>
         <div class="collection-actions">
           <button type="button" class="btn-gold basket-add" data-add-basket="Dalal">Add to basket</button>
           <a class="btn-outline" data-whatsapp-link="Hello, I would like to ask about the Dalal collection" href="#">Contact on WhatsApp</a>
@@ -112,6 +123,7 @@
       <div class="collection-detail-heading">
         <p class="section-eyebrow">— مجموعة Haiba</p>
         <h1 class="section-title">الخشب والفخامة</h1>
+        <div class="collection-price" aria-label="السعر بعد التخفيض 30 ألف دينار عراقي، السعر السابق 45 ألف دينار عراقي، والتوصيل مجاني"><del>45,000 د.ع</del><strong>30,000 د.ع</strong><span>التوصيل مجاني</span></div>
         <div class="collection-actions">
           <button type="button" class="btn-gold basket-add" data-add-basket="Haiba">Add to basket</button>
           <a class="btn-outline" data-whatsapp-link="Hello, I would like to ask about the Haiba collection" href="#">Contact on WhatsApp</a>
@@ -151,7 +163,7 @@
     </section>
 
     <section class="dalal-collection" data-nabd-collection hidden lang="ar" dir="rtl">
-      <div class="collection-detail-heading"><p class="section-eyebrow">— مجموعة Nabd</p><h1 class="section-title">المنعش والرياضي</h1><div class="collection-actions"><button type="button" class="btn-gold basket-add" data-add-basket="Nabd">Add to basket</button><a class="btn-outline" data-whatsapp-link="Hello, I would like to ask about the Nabd collection" href="#">Contact on WhatsApp</a><a class="btn-outline" href="https://www.instagram.com/daralfarhani/" target="_blank" rel="noopener noreferrer">Instagram</a><a class="btn-outline" href="index.html">Back</a></div></div>
+      <div class="collection-detail-heading"><p class="section-eyebrow">— مجموعة Nabd</p><h1 class="section-title">المنعش والرياضي</h1><div class="collection-price" aria-label="السعر بعد التخفيض 30 ألف دينار عراقي، السعر السابق 45 ألف دينار عراقي، والتوصيل مجاني"><del>45,000 د.ع</del><strong>30,000 د.ع</strong><span>التوصيل مجاني</span></div><div class="collection-actions"><button type="button" class="btn-gold basket-add" data-add-basket="Nabd">Add to basket</button><a class="btn-outline" data-whatsapp-link="Hello, I would like to ask about the Nabd collection" href="#">Contact on WhatsApp</a><a class="btn-outline" href="https://www.instagram.com/daralfarhani/" target="_blank" rel="noopener noreferrer">Instagram</a><a class="btn-outline" href="index.html">Back</a></div></div>
       <div class="dalal-grid">
         <article class="dalal-card"><div class="ph-frame"><img src="images/C1.jpg" alt="ناظر"></div><div class="dalal-card-body"><p class="dalal-label">C1</p><h2>ناظر</h2><p>رجالي، ربيع وصيف واستعمال يومي، عملي وحيوي</p><dl><dt>المكونات</dt><dd>مريمية، نرجس، خشب الورد، والسكلارين</dd><dt>ملاحظة</dt><dd>العطر الأصلي لا ينشر هرم نوتات رسمياً، وأبرز مكوناته المذكورة هنا. إذا كُتب هرم في الموقع فخذه من علبتك.</dd></dl></div></article>
         <article class="dalal-card"><div class="ph-frame"><img src="images/C2.jpg" alt="نعناع"></div><div class="dalal-card-body"><p class="dalal-label">C2</p><h2>نعناع</h2><p>يونيسكس، ربيع وصيف، نهاري وحيوي</p><dl><dt>افتتاح</dt><dd>نعناع، ليمون، ريحان، زعتر</dd><dt>قلب</dt><dd>كشمش أسود، لافندر، إكليل الجبل، ياسمين</dd><dt>قاعدة</dt><dd>فيربينا ومسك</dd></dl></div></article>
@@ -160,7 +172,7 @@
     </section>
 
     <section class="dalal-collection" data-sihr-collection hidden lang="ar" dir="rtl">
-      <div class="collection-detail-heading"><p class="section-eyebrow">— مجموعة Sihr</p><h1 class="section-title">التميز والروائح الجذابة</h1><div class="collection-actions"><button type="button" class="btn-gold basket-add" data-add-basket="Sihr">Add to basket</button><a class="btn-outline" data-whatsapp-link="Hello, I would like to ask about the Sihr collection" href="#">Contact on WhatsApp</a><a class="btn-outline" href="https://www.instagram.com/daralfarhani/" target="_blank" rel="noopener noreferrer">Instagram</a><a class="btn-outline" href="index.html">Back</a></div></div>
+      <div class="collection-detail-heading"><p class="section-eyebrow">— مجموعة Sihr</p><h1 class="section-title">التميز والروائح الجذابة</h1><div class="collection-price" aria-label="السعر بعد التخفيض 30 ألف دينار عراقي، السعر السابق 45 ألف دينار عراقي، والتوصيل مجاني"><del>45,000 د.ع</del><strong>30,000 د.ع</strong><span>التوصيل مجاني</span></div><div class="collection-actions"><button type="button" class="btn-gold basket-add" data-add-basket="Sihr">Add to basket</button><a class="btn-outline" data-whatsapp-link="Hello, I would like to ask about the Sihr collection" href="#">Contact on WhatsApp</a><a class="btn-outline" href="https://www.instagram.com/daralfarhani/" target="_blank" rel="noopener noreferrer">Instagram</a><a class="btn-outline" href="index.html">Back</a></div></div>
       <div class="dalal-grid">
         <article class="dalal-card"><div class="ph-frame"><img src="images/D1.jpg" alt="مليكا"></div><div class="dalal-card-body"><p class="dalal-label">D1</p><h2>مليكا</h2><p>نسائي، ربيع وخريف وشتاء، للمساء</p><dl><dt>افتتاح</dt><dd>كمثرى، ليتشي، جريب فروت</dd><dt>قلب</dt><dd>ورد تركي، بخور، فيتيفر</dd><dt>قاعدة</dt><dd>فانيلا، مسك، إيفرنيل</dd></dl></div></article>
         <article class="dalal-card"><div class="ph-frame"><img src="images/D2.jpg" alt="شغف"></div><div class="dalal-card-body"><p class="dalal-label">D2</p><h2>شغف</h2><p>نسائي، كل السنة لكنه يتألق بالجو المعتدل والبارد، حلو ومسائي</p><dl><dt>افتتاح</dt><dd>نيرولي، برغموت، فلفل وردي، كزبرة</dd><dt>قلب</dt><dd>زهر البرتقال، ياسمين، زهرة العسل، ورد، سوسن</dd><dt>قاعدة</dt><dd>سكر، كراميل، فانيلا، مسك، لابدانوم</dd></dl></div></article>

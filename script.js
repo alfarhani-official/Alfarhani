@@ -21,7 +21,7 @@ if (currentPage) {
 // Footer year + WhatsApp helper: builds a wa.me link from the number set
 // in CONTACT below, so you only edit the number in one place.
 const CONTACT = {
-  whatsappNumber: '9647515825235', // Country code followed by the WhatsApp number, without + or spaces.
+  whatsappNumber: '9647703975638', // Country code followed by the WhatsApp number, without + or spaces.
   email: 'alirnew6@gmail.com'
 };
 
@@ -60,6 +60,42 @@ const NOTE_TRANSLATIONS = {
 const translateNotes = (value) => value;
 const translateGender = (value) => value;
 const translateSeason = (value) => value;
+const ARABIC_PRODUCT_DESCRIPTIONS = [
+  'فانيلا دافئة بتوابل ولمسة تعبّر عن الوعد', 'عطر زهري ألدهيدي كلاسيكي خالد', 'زعفران وعنبر بطابع بلوري', 'عطر جريء وقوي يعبّر عن الانتصار',
+  'عطر زهري ذهبي ومشرق', 'عطر منعش ومفعم بالحيوية', 'عطر فاخر وثمين بطابع ذهبي', 'عطر منعش وحرّ مستوحى من الصحراء',
+  'عطر زهري واضح ومشرق', 'عطر شيبر أنيق وشبابي', 'فانيلا وياسمين بإشراقة ناعمة', 'حمضيات مائية منعشة ونشيطة',
+  'عطر زهري خشبي ناعم وأنيق', 'عطر غني وداكن بطابع حسي', 'مسك دافئ بلمسة بودرية', 'عطر ورد بري أخفّ وأنعم',
+  'عود مدخن وخشب صندل بطابع ملكي', 'جوز الهند والفانيلا بلمسة استوائية', 'لافندر وزهر البرتقال بروح حرة', 'انتعاش أخضر بطابع عصري',
+  'الشاي والأخشاب بتركيبة غير تقليدية', 'مسك زهري ناعم ونظيف', 'ثراء فاخر من الأخشاب', 'عنبر وتوابل ولمسة تبغ',
+  'باقة بيضاء من الياسمين ومسك الروم', 'عطر زهري داكن بحلاوة غورماند', 'تركيبة شرقية معقدة', 'مارشميلو حلو مع زهر البرتقال',
+  'ورد دافئ بلمسة حلوة', 'عود صافٍ وأصيل', 'بصمة عميقة من المسك', 'عود دافئ مع العنبر',
+  'نسخة أغنى وأكثر كثافة من العود', 'عطر زهري فاكهي بالكشمش الأسود', 'عطر شقيق لعهدِي', 'خشب صندل وسوسن بثقة وأناقة',
+  'جوز الهند والفانيلا بطابع غورماند', 'ورد وليتشي ولمسة رومانسية', 'ورد وباتشولي بطابع عصري', 'فانيلا وتونكا مكثفتان',
+  'سوسن وبرالين ولمسة حلوة', 'تفاح وقرفة وأخشاب بطابع كلاسيكي', 'عطر زهري فاكهي أنثوي', 'عطر زهري يتمحور حول الورد',
+  'عطر زهري شرقي غامض', 'عطر زهري غورماند ملهم', 'افتتاحية فاخرة من العود والورد', 'عطر درامي بطابع مسرحي',
+  'أنيق ومتقن بطابع معماري', 'عطر مشرق بطابع أسطوري', 'عطر زهري فاكهي مشرق للنساء'
+];
+const ARABIC_PRODUCT_NAMES = { Faris: 'فارس', Atheer: 'أثير', Hala: 'هالة', Hurr: 'حُرّة', Fatin: 'فاتن' };
+const ARABIC_NOTE_TRANSLATIONS = {
+  'Grasse Rose': 'ورد غراس', 'Madagascar Vanilla': 'فانيلا مدغشقر', 'Vibrant Spice Accord': 'مزيج توابل نابض بالحيوية',
+  'Elemi Essence': 'خلاصة الإليمي', 'Tuberose Absolute': 'خلاصة مسك الروم', 'Iris Essence': 'خلاصة السوسن',
+  'Dark Wood Accord': 'مزيج أخشاب داكنة', 'Benzoin of Siam Absolute': 'خلاصة بنزوين سيام', 'Rose Essence': 'خلاصة الورد',
+  'Damask Rose Absolute': 'خلاصة الورد الدمشقي', 'Amberwood': 'خشب عنبري', 'Ambrox': 'أمبروكس', 'Rhubarb': 'راوند',
+  'Petalia': 'بيتـاليا', 'Big Strawberry': 'فراولة كبيرة', 'Bulgarian Rose': 'ورد بلغاري', 'Rose de Mai': 'ورد مايو',
+  'Indian Jasmine': 'ياسمين هندي', 'Ambermax™': 'أمبَرماكس', 'Coumarin': 'كومارين', 'Davana': 'دافانا',
+  'Cumin': 'كمون', 'Bitter Almond': 'لوز مر', 'Tangerine': 'يوسفي', 'Ambrette (Musk Mallow)': 'أمبريت (مسك الخبازى)',
+  'Violet Accord': 'اتفاقية البنفسج', 'Ambrox': 'أمبروكس', 'Petalia': 'بيتـاليا', 'Agarwood (Oud)': 'خشب العود',
+  'Freesia': 'فريزيا', 'Tangerine': 'يوسفي', 'Davana': 'دافانا', 'Pimento': 'فلفل إفرنجي', 'Haitian Vetiver': 'فيتيفر هايتي',
+  'Rose de Mai': 'ورد مايو', 'Sandalwood': 'خشب الصندل', 'Blackberry': 'توت أسود', 'Plum': 'برقوق',
+  'Passionfruit': 'فاكهة العاطفة', 'Geranium': 'إبرة الراعي', 'Mahogany': 'ماهوجني', 'Tuberose': 'مسك الروم',
+  'Violet': 'بنفسج', 'Blackcurrant': 'كشمش أسود', 'No top notes': 'لا توجد نفحات افتتاحية', 'Oud': 'عود',
+  'Papyrus': 'بردي', 'Fruits': 'فواكه', 'Floral Notes': 'نفحات زهرية', 'Suede': 'جلد سويدي',
+  'Cashmeran': 'كشميران', 'Praline': 'برالين', 'Thyme': 'زعتر', 'Vanilla Orchid': 'أوركيد الفانيلا', 'Red Berries': 'توت أحمر'
+};
+const translateNoteListToArabic = (value = '') => value.split(', ').map((note) => ARABIC_NOTE_TRANSLATIONS[note] || NOTE_TRANSLATIONS[note] || note).join('، ');
+const translateGenderToArabic = (value = '') => value.split(' / ').map((gender) => ({ Men: 'رجالي', Women: 'نسائي', Unisex: 'للجنسين' }[gender] || gender)).join(' / ');
+const translateSeasonToArabic = (value = '') => value.split(', ').map((season) => ({ Spring: 'الربيع', Summer: 'الصيف', Fall: 'الخريف', Winter: 'الشتاء' }[season] || season)).join('، ');
+const ORIGINAL_PRICE = '24,000 Iraqi dinars';
 const PRICE = '19,000 Iraqi dinars';
 const fallbackMarkup = (index) => `<span class="ph-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg><span>Image unavailable</span></span>`;
 const PRODUCT_NAMES = {
@@ -82,6 +118,7 @@ const PRODUCT_NAMES = {
   'ساحرة': 'Sahira', 'الملهمة': 'Al Molhima', 'بداية': 'Bidaya', 'أنشودة': 'Anshuda', 'صرح': 'Sarh', 'الأسطورة': 'Al Ostoura'
 };
 const getProductName = (name) => PRODUCT_NAMES[name] || name;
+const getArabicProductName = (name) => ARABIC_PRODUCT_NAMES[name] || Object.keys(PRODUCT_NAMES).find((arabicName) => PRODUCT_NAMES[arabicName] === name) || name;
 const BASKET_STORAGE_KEY = 'alfarhani-basket';
 let basket = JSON.parse(localStorage.getItem(BASKET_STORAGE_KEY) || '[]');
 basket = basket.map(getProductName);
@@ -207,10 +244,14 @@ const getDetailUrl = (product, index) => {
   const description = PRODUCT_DESCRIPTIONS[index] || product.description;
   const image = getNewProductImage(index) || (index === 0 ? 'images/product-1a.jpg' : index === 1 ? 'images/product-2a.jpg' : index === 2 ? 'images/product-3a.jpg' : index === 3 ? 'images/product-4a.jpg' : index === 4 ? 'images/product-5a.jpg' : index === 5 ? 'images/product-6a.jpg' : index === 6 ? 'images/product-7a.jpg' : index === 7 ? 'images/product-8a.jpg' : index === 8 ? 'images/product-9a.jpg' : index === 9 ? 'images/product-10a.jpg' : index === 10 ? 'images/product-11a.jpg' : index === 11 ? 'images/product-12a.jpg' : index === 12 ? 'images/product-13a.jpg' : index === 13 ? 'images/product-14a.jpg' : index === 14 ? 'images/product-15a.jpg' : index === 15 ? 'images/product-16a.jpg' : index === 16 ? 'images/product-17a.jpg' : index === 17 ? 'images/product-18a.jpg' : index === 18 ? 'images/product-19a.jpg' : index === 19 ? 'images/product-20a.jpg' : index === 20 ? 'images/product-21a.jpg' : index === 21 ? 'images/product-22a.jpg' : index === 22 ? 'images/product-23a.jpg' : index === 23 ? 'images/product-24a.jpg' : index === 24 ? 'images/product-25a.jpg' : index === 25 ? 'images/product-26a.jpg' : index === 26 ? 'images/product-27a.jpg' : index === 27 ? 'images/product-28a.jpg' : index === 28 ? 'images/product-29a.jpg' : index === 29 ? 'images/product-30a.jpg' : index === 30 ? 'images/product-31a.jpg' : index === 31 ? 'images/product-32a.jpg' : index === 32 ? 'images/product-33a.jpg' : `images/product-${index + 1}.jpg`);
   const params = new URLSearchParams({
-    type: 'product', image, alt: getProductName(product.name),
-    title: getProductName(product.name), description, price: PRICE,
+    type: 'product', image, productIndex: String(index), alt: getProductName(product.name),
+    title: getProductName(product.name), description, originalPrice: ORIGINAL_PRICE, price: PRICE,
     gender: translateGender(product.gender), season: translateSeason(product.season), top: translateNotes(product.top),
-    middle: translateNotes(product.middle), base: translateNotes(product.base)
+    middle: translateNotes(product.middle), base: translateNotes(product.base),
+    titleAr: getArabicProductName(product.name), descriptionAr: ARABIC_PRODUCT_DESCRIPTIONS[index] || product.description,
+    originalPriceAr: '٢٤٬٠٠٠ دينار عراقي', priceAr: '١٩٬٠٠٠ دينار عراقي', genderAr: translateGenderToArabic(product.gender),
+    seasonAr: translateSeasonToArabic(product.season), topAr: translateNoteListToArabic(product.top),
+    middleAr: translateNoteListToArabic(product.middle), baseAr: translateNoteListToArabic(product.base)
   });
   if (index === 0) params.set('hoverImage', 'images/product-1b.png');
   if (index === 1) params.set('hoverImage', 'images/product-2b.png');
@@ -257,7 +298,7 @@ if (productGrid && Array.isArray(PRODUCTS)) {
   }
   productGrid.innerHTML = PRODUCTS.map((product, index) => `<div class="card" data-detail-url="${getDetailUrl(product, index)}" tabindex="0" role="link" aria-label="View details for ${getProductName(product.name)}">
     <div class="ph-frame"><img src="${index === 0 ? 'images/product-1a.jpg' : index === 1 ? 'images/product-2a.jpg' : index === 2 ? 'images/product-3a.jpg' : index === 3 ? 'images/product-4a.jpg' : index === 4 ? 'images/product-5a.jpg' : index === 5 ? 'images/product-6a.jpg' : index === 6 ? 'images/product-7a.jpg' : index === 7 ? 'images/product-8a.jpg' : index === 8 ? 'images/product-9a.jpg' : index === 9 ? 'images/product-10a.jpg' : index === 10 ? 'images/product-11a.jpg' : index === 11 ? 'images/product-12a.jpg' : index === 12 ? 'images/product-13a.jpg' : index === 13 ? 'images/product-14a.jpg' : index === 14 ? 'images/product-15a.jpg' : index === 15 ? 'images/product-16a.jpg' : index === 16 ? 'images/product-17a.jpg' : index === 17 ? 'images/product-18a.jpg' : index === 18 ? 'images/product-19a.jpg' : index === 19 ? 'images/product-20a.jpg' : index === 20 ? 'images/product-21a.jpg' : index === 21 ? 'images/product-22a.jpg' : index === 22 ? 'images/product-23a.jpg' : index === 23 ? 'images/product-24a.jpg' : index === 24 ? 'images/product-25a.jpg' : index === 25 ? 'images/product-26a.jpg' : index === 26 ? 'images/product-27a.jpg' : index === 27 ? 'images/product-28a.jpg' : index === 28 ? 'images/product-29a.jpg' : index === 29 ? 'images/product-30a.jpg' : index === 30 ? 'images/product-31a.jpg' : index === 31 ? 'images/product-32a.jpg' : index === 32 ? 'images/product-33a.jpg' : `images/product-${index + 1}.jpg`}" alt="${getProductName(product.name)}">${index === 0 ? '<img class="image-hover" src="images/product-1b.png" alt="">' : index === 1 ? '<img class="image-hover" src="images/product-2b.png" alt="">' : index === 2 ? '<img class="image-hover" src="images/product-3b.jpg" alt="">' : index === 3 ? '<img class="image-hover" src="images/product-4b.png" alt="">' : index === 4 ? '<img class="image-hover" src="images/product-5b.png" alt="">' : index === 5 ? '<img class="image-hover" src="images/product-6b.jpg" alt="">' : index === 6 ? '<img class="image-hover" src="images/product-7b.jpg" alt="">' : index === 7 ? '<img class="image-hover" src="images/product-8b.jpg" alt="">' : index === 8 ? '<img class="image-hover" src="images/product-9b.jpg" alt="">' : index === 9 ? '<img class="image-hover" src="images/product-10b.jpg" alt="">' : index === 10 ? '<img class="image-hover" src="images/product-11b.jpg" alt="">' : index === 11 ? '<img class="image-hover" src="images/product-12b.jpg" alt="">' : index === 12 ? '<img class="image-hover" src="images/product-13b.jpg" alt="">' : index === 13 ? '<img class="image-hover" src="images/product-14b.jpg" alt="">' : index === 14 ? '<img class="image-hover" src="images/product-15b.jpg" alt="">' : index === 15 ? '<img class="image-hover" src="images/product-16b.jpg" alt="">' : index === 16 ? '<img class="image-hover" src="images/product-17b.jpg" alt="">' : index === 17 ? '<img class="image-hover" src="images/product-18b.jpg" alt="">' : index === 18 ? '<img class="image-hover" src="images/product-19b.jpg" alt="">' : index === 19 ? '<img class="image-hover" src="images/product-20b.jpg" alt="">' : index === 20 ? '<img class="image-hover" src="images/product-21b.jpg" alt="">' : index === 21 ? '<img class="image-hover" src="images/product-22b.jpg" alt="">' : index === 22 ? '<img class="image-hover" src="images/product-23b.jpg" alt="">' : index === 23 ? '<img class="image-hover" src="images/product-24b.jpg" alt="">' : index === 24 ? '<img class="image-hover" src="images/product-25b.jpg" alt="">' : index === 25 ? '<img class="image-hover" src="images/product-26b.jpg" alt="">' : index === 26 ? '<img class="image-hover" src="images/product-27b.jpg" alt="">' : index === 27 ? '<img class="image-hover" src="images/product-28b.jpg" alt="">' : index === 28 ? '<img class="image-hover" src="images/product-29b.jpg" alt="">' : index === 29 ? '<img class="image-hover" src="images/product-30b.jpg" alt="">' : index === 30 ? '<img class="image-hover" src="images/product-31b.jpg" alt="">' : index === 31 ? '<img class="image-hover" src="images/product-32b.jpg" alt="">' : index === 32 ? '<img class="image-hover" src="images/product-33b.jpg" alt="">' : ''}${fallbackMarkup(index)}</div>
-    <div class="card-body"><h3 class="card-title">${getProductName(product.name)}</h3><p class="card-sub">${PRODUCT_DESCRIPTIONS[index] || product.description}</p><p class="card-price">${PRICE}</p><button type="button" class="card-link basket-add" data-add-basket="${getProductName(product.name)}">Add to basket</button><a href="${getDetailUrl(product, index)}" class="card-link" data-whatsapp-link="Hello, I would like to ask about ${getProductName(product.name)}">Ask on WhatsApp</a></div>
+    <div class="card-body"><h3 class="card-title">${getProductName(product.name)}</h3><p class="card-sub">${PRODUCT_DESCRIPTIONS[index] || product.description}</p><p class="card-price"><del>${ORIGINAL_PRICE}</del><strong>${PRICE}</strong></p><button type="button" class="card-link basket-add" data-add-basket="${getProductName(product.name)}">Add to basket</button><a href="${getDetailUrl(product, index)}" class="card-link" data-whatsapp-link="Hello, I would like to ask about ${getProductName(product.name)}">Ask on WhatsApp</a></div>
   </div>`).join('');
   productGrid.querySelectorAll('.card').forEach((card, index) => {
     const category = getShopCategory(getProductName(PRODUCTS[index].name));
@@ -444,7 +485,9 @@ if (detailPage) {
     hoverImage.hidden = false;
   }
   const price = params.get('price') || '';
-  detailPage.querySelector('.detail-price').textContent = price;
+  const detailPrice = detailPage.querySelector('.detail-price');
+  detailPrice.querySelector('[data-detail-price-old]').textContent = params.get('originalPrice') || ORIGINAL_PRICE;
+  detailPrice.querySelector('[data-detail-price-sale]').textContent = price;
   if (price) detailPage.querySelector('.detail-price').hidden = false;
   const metadata = detailPage.querySelector('[data-detail-meta]');
   if (params.get('gender')) {
@@ -454,6 +497,25 @@ if (detailPage) {
     metadata.querySelector('[data-detail-top]').textContent = params.get('top');
     metadata.querySelector('[data-detail-middle]').textContent = params.get('middle');
     metadata.querySelector('[data-detail-base]').textContent = params.get('base');
+  }
+  const arabicMetadata = detailPage.querySelector('[data-detail-meta-ar]');
+  if (params.get('type') === 'product' && params.get('gender')) {
+    const requestedProductIndex = params.has('productIndex') ? Number(params.get('productIndex')) : -1;
+    const imageProductIndex = PRODUCTS.findIndex((_, index) => sourceImage === (getNewProductImage(index) || `images/product-${index + 1}a.jpg`));
+    const productIndex = Number.isInteger(requestedProductIndex) && requestedProductIndex >= 0 && requestedProductIndex < PRODUCTS.length
+      ? requestedProductIndex
+      : imageProductIndex >= 0 ? imageProductIndex : PRODUCTS.findIndex((product) => getProductName(product.name) === params.get('title'));
+    const product = PRODUCTS[productIndex];
+    arabicMetadata.hidden = false;
+    arabicMetadata.querySelector('[data-detail-title-ar]').textContent = params.get('titleAr') || getArabicProductName(params.get('title'));
+    arabicMetadata.querySelector('[data-detail-description-ar]').textContent = params.get('descriptionAr') || ARABIC_PRODUCT_DESCRIPTIONS[productIndex] || product?.description || '';
+    arabicMetadata.querySelector('[data-detail-price-ar-old]').textContent = params.get('originalPriceAr') || '٢٤٬٠٠٠ دينار عراقي';
+    arabicMetadata.querySelector('[data-detail-price-ar]').textContent = params.get('priceAr') || '١٩٬٠٠٠ دينار عراقي';
+    arabicMetadata.querySelector('[data-detail-gender-ar]').textContent = params.get('genderAr') || translateGenderToArabic(params.get('gender'));
+    arabicMetadata.querySelector('[data-detail-season-ar]').textContent = params.get('seasonAr') || translateSeasonToArabic(params.get('season'));
+    arabicMetadata.querySelector('[data-detail-top-ar]').textContent = params.get('topAr') || translateNoteListToArabic(params.get('top'));
+    arabicMetadata.querySelector('[data-detail-middle-ar]').textContent = params.get('middleAr') || translateNoteListToArabic(params.get('middle'));
+    arabicMetadata.querySelector('[data-detail-base-ar]').textContent = params.get('baseAr') || translateNoteListToArabic(params.get('base'));
   }
   detailPage.querySelector('[data-detail-shop]').hidden = params.get('type') !== 'collection';
   detailPage.querySelector('[data-detail-back]').href = params.get('type') === 'product' ? 'shop.html' : 'index.html';

@@ -322,6 +322,8 @@ img { max-width: 100%; display: block; }
   gap: 22px;
 }
 
+.collection-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
 .shop-categories {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -397,6 +399,40 @@ img { max-width: 100%; display: block; }
 .card-title { font-size: 1.05rem; color: var(--ivory); }
 .card-sub { color: var(--ivory-dim); font-size: 0.88rem; }
 .card-price { color: var(--gold-soft); font-family: var(--font-display); font-weight: 600; margin-top: auto; padding-top: 10px; }
+.card-price del,
+.detail-price del { display: block; color: var(--ivory-dim); font-size: 0.82rem; font-weight: 400; }
+.card-price strong,
+.detail-price strong { display: block; color: var(--gold-soft); font-size: inherit; }
+
+.collection-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin: 4px 0;
+  font-family: var(--font-display);
+}
+
+.collection-price del { color: var(--ivory-dim); font-size: 0.84rem; }
+.collection-price strong { color: var(--gold-soft); font-size: 1.08rem; }
+.collection-price span { flex-basis: 100%; color: var(--gold); font-size: 0.78rem; }
+
+.collection-grid .collection-basket-add {
+  width: 100%;
+  border: 1px solid var(--gold);
+  background: var(--gold);
+  color: var(--charcoal-deep);
+  cursor: pointer;
+}
+
+.collection-grid .collection-basket-add:hover { color: var(--charcoal-deep); background: var(--gold-soft); }
+.collection-grid .collection-basket-add.is-added { color: var(--charcoal-deep); background: var(--gold-soft); cursor: default; }
+
+@media (max-width: 420px) {
+  .collection-grid { gap: 12px; }
+  .collection-grid .card-body { padding: 14px 12px 16px; }
+  .collection-grid .collection-basket-add { font-size: 0.72rem; letter-spacing: 0; }
+}
 
 .card-link {
   margin-top: 14px;
@@ -497,10 +533,17 @@ img { max-width: 100%; display: block; }
 .detail-kicker { color: var(--gold); font-size: 0.82rem; margin: 0 0 22px; }
 .detail-description { color: var(--ivory-dim); font-size: 1.05rem; line-height: 1.9; max-width: 540px; }
 .detail-price { color: var(--gold-soft); font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; margin-top: 22px; }
+.detail-price-values { display: flex; align-items: baseline; gap: 10px; }
+.detail-price-values del { color: var(--ivory-dim); font-size: 0.82rem; }
+.detail-price-values strong { color: var(--gold-soft); }
 .detail-meta { border-top: 1px solid var(--gold-dim); margin-top: 24px; max-width: 680px; }
 .detail-meta p { display: grid; grid-template-columns: 140px 1fr; gap: 18px; margin: 0; padding: 11px 0; border-bottom: 1px solid rgba(201, 162, 39, 0.16); color: var(--ivory-dim); }
 .detail-meta strong { color: var(--gold-soft); font-family: var(--font-display); font-weight: 600; }
 .detail-meta span { direction: ltr; text-align: right; }
+.detail-meta-ar { direction: rtl; }
+.detail-meta-ar span { direction: rtl; text-align: right; }
+.detail-ar-title { color: var(--gold-soft); font-size: 1.15rem; margin: 18px 0 8px; }
+.detail-ar-description { color: var(--ivory-dim); line-height: 1.9; margin: 0; padding: 10px 0; border-bottom: 1px solid rgba(201, 162, 39, 0.16); }
 .detail-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
 
 .collection-detail-heading {
@@ -582,6 +625,21 @@ img { max-width: 100%; display: block; }
 
 .testimonial-quote { color: var(--ivory); font-size: 0.98rem; line-height: 1.75; }
 .testimonial-name { color: var(--gold-soft); font-family: var(--font-display); font-size: 0.9rem; }
+
+.review-invite {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-top: 34px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gold-dim);
+  text-align: center;
+}
+
+.review-invite p { color: var(--ivory); margin: 0; }
+.review-invite .btn-gold { padding: 10px 22px; }
 
 /* ---------- Footer ---------- */
 .site-footer {
